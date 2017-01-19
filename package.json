@@ -1,0 +1,24 @@
+{
+  "name": "kalimantan-datacredits",
+  "version": "0.0.1",
+  "description": "DataCredits for Contributions to Kalimantan Open Data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kalimantan",
+    "osm",
+    "openstreetmap",
+    "wikipedia",
+    "wikidata"
+  ],
+  "author": "Iqbal Mohammad Abdul Ghoni <iqballmags@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "dotenv": "^4.0.0",
+    "mongoose": "^4.7.7",
+    "request": "^2.79.0"
+  }
+}
