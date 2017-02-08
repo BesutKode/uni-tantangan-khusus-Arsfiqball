@@ -21,7 +21,7 @@ module.exports = (cli) => {
 
           return resolve(body);
         });
-      })
+      });
     })().then((body) => {
       // Parsing OSM Data
       return new Promise((resolve, reject) => {
@@ -60,8 +60,6 @@ module.exports = (cli) => {
               timestamp: osmdata.elements[i].timestamp
             }, {
               upsert: true
-            }, (err) => {
-              if (err) { console.log(err); }
             });
           }
         }

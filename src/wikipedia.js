@@ -36,8 +36,6 @@ exports.save = (wikiObj, lang) => {
           name: wikiObj.query.pages[id].contributors[i].name
         }, {
           upsert: true
-        }, (err) => {
-          if (err) { console.log(err); }
         });
       }
     }
