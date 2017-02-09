@@ -2,6 +2,10 @@ const request = require('request');
 const db = require('../src/db');
 const DataCredit = require('../src/db').DataCreditModel;
 
+function log(err, data) {
+  //
+}
+
 exports.request = (title, lang) => {
   return new Promise((resolve, reject) => {
     var url = "https://"+lang+".wikipedia.org/w/api.php?action=query&format=json&prop=contributors&titles="+title;
@@ -11,14 +15,13 @@ exports.request = (title, lang) => {
         return reject(new Error('Request failed.'));
       }
 
-      return resolve(JSON.parse(body), lang);
+      return resolve(JSON.parse(body));
     });
   });
 };
 
-exports.save = (wikiObj, lang) => {
+exports.save = (lang) => (wikiObj) => {
   return new Promise((resolve, reject) => {
-
     db.connect();
 
     var ids = wikiObj.continue.pccontinue.split('|');
@@ -36,7 +39,7 @@ exports.save = (wikiObj, lang) => {
           name: wikiObj.query.pages[id].contributors[i].name
         }, {
           upsert: true
-        });
+        }, log);
       }
     }
 

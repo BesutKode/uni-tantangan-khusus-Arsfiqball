@@ -6,7 +6,7 @@ module.exports = (cli) => {
     var wikiPromise = wikipedia.request(title, opts.lang);
 
     if (opts.save) {
-      wikiPromise = wikiPromise.then(wikipedia.save);
+      wikiPromise = wikiPromise.then(wikipedia.save(opts.lang));
     }
 
     wikiPromise
