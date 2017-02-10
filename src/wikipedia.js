@@ -22,10 +22,13 @@ exports.request = (title, lang) => {
 
 exports.save = (lang) => (wikiObj) => {
   return new Promise((resolve, reject) => {
-    db.connect();
-
+    if (!wikiObj.continue) {
+      return resolve(wikiObj);
+    }
     var ids = wikiObj.continue.pccontinue.split('|');
     var id = ids[0];
+
+    db.connect();
 
     for (var i = 0; i < wikiObj.query.pages[id].contributors.length; i++) {
       if (wikiObj.query.pages[id].contributors[i].name) {
