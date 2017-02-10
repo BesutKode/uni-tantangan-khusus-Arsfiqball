@@ -16,6 +16,7 @@
   "author": "Iqbal Mohammad Abdul Ghoni <iqballmags@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "async": "^2.1.4",
     "commander": "^2.9.0",
     "dotenv": "^4.0.0",
     "mongoose": "^4.7.7",
