@@ -1,0 +1,4 @@
+[out:json];
+relation(3986083);
+(._;>;);
+out meta;

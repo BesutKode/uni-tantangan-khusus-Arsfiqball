@@ -4,7 +4,7 @@
   "description": "DataCredits for Contributions to Kalimantan Open Data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "kalimantan",
@@ -21,5 +21,9 @@
     "dotenv": "^4.0.0",
     "mongoose": "^4.7.7",
     "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
   }
 }

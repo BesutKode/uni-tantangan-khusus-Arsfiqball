@@ -7,3 +7,6 @@ before_script:
   - npm install -g jshint
 script:
   - jshint .
+  - query="http://overpass-api.de/api/interpreter?data=$(<test/kalimantan.osm-q.txt)"
+  - wget -O test/kalimantan.osm.json "$query"
+  - npm test
