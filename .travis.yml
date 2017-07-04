@@ -4,9 +4,10 @@ node_js:
   - 5
   - 6
 before_script:
-  - npm install -g jshint
+  - npm install -g jshint codecov
 script:
   - jshint .
   - query="http://overpass-api.de/api/interpreter?data=$(<test/kalimantan.osm-q.txt)"
   - wget -O test/kalimantan.osm.json "$query"
   - npm test
+  - codecov

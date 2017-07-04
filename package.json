@@ -4,7 +4,7 @@
   "description": "DataCredits for Contributions to Kalimantan Open Data",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nyc mocha"
   },
   "keywords": [
     "kalimantan",
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "chai": "^4.0.2",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3"
   }
 }
