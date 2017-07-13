@@ -4,7 +4,8 @@
   "description": "DataCredits for Contributions to Kalimantan Open Data",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha"
+    "test": "nyc mocha",
+    "report-coverage": "nyc report --reporter=lcov > coverage.lcov"
   },
   "keywords": [
     "kalimantan",

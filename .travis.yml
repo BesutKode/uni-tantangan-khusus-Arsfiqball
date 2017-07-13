@@ -10,4 +10,5 @@ script:
   - query="http://overpass-api.de/api/interpreter?data=$(<test/kalimantan.osm-q.txt)"
   - wget -O test/kalimantan.osm.json "$query"
   - npm test
-  - codecov
+  - npm run report-coverage
+  - codecov -t ${CODECOV_TOKEN}
